@@ -1,0 +1,243 @@
+* { margin: 0; padding: 0; }
+
+body{
+	font-family: "Dancing Script";
+	font-size: 20px;
+	background-color: #000000;
+}
+/*Animación*/
+.contenido{
+	animation-duration: 2s;
+	animation-name: animation;
+}
+
+@-webkit-keyframes animation{
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	100%{
+		margin-top: 0%;
+	}
+}
+/*Animación*/
+/*Visualización pantalla desktop y tablets*/
+@media (min-width: 901px) {
+.contenido{
+	width: 1024px;
+	margin-left: auto;
+  margin-right: auto;
+	padding: 10px;
+}
+}
+
+/*Visualización pantalla moviles*/
+@media (max-width: 900px) {
+	.contenido{
+		width: 100%;
+		padding: 10px;
+	}
+}
+
+/*header*/
+header{
+	background-color: #5B7989;
+	border-radius: 10px 10px 0px 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+h1{
+	color: white;
+	text-align: left;
+	text-shadow: 2px #02010A;
+}
+nav{
+		word-spacing: 1cm;
+}
+.l1, .l2, .l3{ color: white;}
+.l4, .l5{color:black;}
+
+ a:hover{
+	 text-decoration: none;
+ }
+ a:visited{
+	 text-decoration: none;
+ }
+/*header*/
+
+/*Section*/
+/* Animación imagen paisajes*/
+img.imgs1{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+img.imgs2,img.imgs4,img.imgs6{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+img.imgs3{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+
+/* Visualización en desktop o tablets para las imagenes paisajes y retratos*/
+@media (min-width: 901px) {
+
+	nav{
+			text-align: right;
+			font-weight: bold;
+	}
+	h1{
+		text-align: left;
+	}
+
+	div [class*="imgs"]{
+	  min-width:  90px;
+	}
+
+		.contenedor{
+			display: flex;
+	  	flex-direction: row;
+			flex-wrap: wrap;
+			background-color: #d5c75f;
+			width: 100%;
+			text-align: center;
+			justify-content: space-around;
+			padding-bottom: 30px;
+			padding-top: 10px;
+		}
+
+	.bloque1,.bloque2,.bloque3,.bloque4,.bloque5,.bloque6 {
+		width: 30%;
+		height: 100%;
+		margin-left: 20px;
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+	.bloque1 {
+  	order: 1;
+	}
+	.bloque2 {
+  	order: 2;
+	}
+	.bloque3 {
+  	order: 3;
+	}
+	.bloque4 {
+  	order: 4;
+	}
+	.bloque5 {
+  	order: 5;
+	}
+	.bloque6 {
+  	order: 6;
+	}
+
+	img.imgs1,img.imgs2,img.imgs3,img.imgs4,img.imgs5,img.imgs6 {
+		border: 1px solid ;
+		width: 90%;
+		height: 90%;
+		box-shadow: 2px 2px #02010a;
+	}
+
+}
+/* Visualización en moviles para las imagenes paisajes y retratos*/
+@media (max-width: 900px) {
+	nav{
+			text-align: center;
+			font-weight: bold;
+	}
+	h1{
+		text-align: center;
+	}
+
+	.bloque1,.bloque2,.bloque3,.bloque4,.bloque5,.bloque6 {
+		width: 100%;
+		height: 50%;
+		text-align: center;
+	  padding-top: 40px;
+		padding-bottom: 30px;
+		border: 1px;
+		background-color: #d5c75f;
+	}
+
+	.imgs1,.imgs2,.imgs3,.imgs4,.imgs5,.imgs6{
+		border: 1px solid ;
+		width:90%;
+		height: 90%;
+		box-shadow: 2px 2px #02010a;
+	}
+}
+/*Section*/
+
+/* footer */
+h2{
+	font-size: 30px;
+}
+p{
+	font-size: 20px;
+}
+/* Visualización en desktop o tablets*/
+@media (min-width: 901px) {
+	.imgf,.imgt,.imgi{
+		width:10%;
+		height: 10%;
+	}
+
+.contenedor2{
+	display: flex;
+	flex-direction: row;
+	background-color: #C6d5c5;
+	width: 100%
+	flex-wrap: wrap;
+	justify-content:center;
+	font-size: 15px;
+	text-align:justify;
+	border-radius: 0px 0px 10px 10px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+
+.bloquef1, .bloquef2,.bloquef3,.bloquef4{
+	width: 100%;
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.bloquef1 {order: 1;}
+.bloquef2 {order: 2;}
+.bloquef3 {order: 3;}
+.bloquef4 {order: 4;}
+}
+
+/* Visualización en moviles*/
+@media (max-width: 900px) {
+	.imgf,.imgt,.imgi{
+		width:5%;
+		height: 5%;
+	}
+	.contenedor2{
+		background-color: #C6d5c5;
+		width: 100%
+		justify-content:center;
+		font-size: 15px;
+		text-align:justify;
+		border-radius: 0px 0px 10px 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.bloquef1,.bloquef2,.bloquef3,.bloquef4{
+		width: 100%;
+		height: 50%;
+		text-align: left;
+	  padding-top: 40px;
+		padding-bottom: 30px;
+	}
+}
+/*footer*/
